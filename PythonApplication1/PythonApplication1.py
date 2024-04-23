@@ -30,7 +30,7 @@ plt.show()
 for a in range(11):        #  t = 2*n - 1 = m*m   
     for b in range(21):
         for c in range(21):
-            if a != 0 and b != 0 and c != 0 and a + b > c and b + c > a and a + c > b and  a ** 2 + b ** 2 == c ** 2 # Pythagoras
+            if a != 0 and b != 0 and c != 0 and a + b > c and b + c > a and a + c > b and  a ** 2 + b ** 2 == c ** 2： # Pythagoras
                  p = ( a + b + c ) * ( 1 / 2 ) ; s = ( p * ( p - a ) * ( p - b ) * ( p - c ) ) ** ( 1 / 2 ) ;        # Heron of Alexandria
                  print('{:10}{:10}{:10}{:10}'.format(a,b,c,s)) ;
                  print("."*40)
