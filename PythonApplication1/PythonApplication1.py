@@ -51,3 +51,53 @@ plt.plot(n,t1)
 plt.plot([0,6],[0,0])
 plt.grid()
 plt.show()
+
+import matplotlib.pyplot as plt
+import numpy
+from matplotlib.patches import Ellipse 
+
+
+plt.title("Euclidis Elementorum")
+ellipse=Ellipse(xy=(-1,0),width=2*2,height=2*2,angle=0,fill=False,color='g')
+plt.gcf().gca().add_artist(ellipse)
+ellipse=Ellipse(xy=(1,0),width=2*2,height=2*2,angle=0,fill=False,color='y')
+plt.gcf().gca().add_artist(ellipse)
+ellipse=Ellipse(xy=(0,0),width=1*2,height=1.73205*2,angle=0,fill=False,color='r')
+plt.gcf().gca().add_artist(ellipse)
+ellipse=Ellipse(xy=(0,0),width=0.866025*2,height=0.866025*2,angle=0,fill=False,color='r')
+plt.gcf().gca().add_artist(ellipse)
+ellipse=Ellipse(xy=(0,1.73205),width=1.5*2,height=1.5*2,angle=0,fill=False,color='b')
+plt.gcf().gca().add_artist(ellipse)
+ellipse=Ellipse(xy=(0,-1.73205),width=1.5*2,height=1.5*2,angle=0,fill=False,color='b')
+plt.gcf().gca().add_artist(ellipse)
+ellipse=Ellipse(xy=(0,1.73205),width=0.866025*2,height=0.866025*2,angle=0,fill=False,color='r')
+plt.gcf().gca().add_artist(ellipse)
+plt.plot([-1,1],[0,0])
+plt.plot([-1,0],[0,1.73205])
+plt.plot([1,0],[0,1.73205])
+plt.plot([-1,0],[0,-1.73205])
+plt.plot([1,0],[0,-1.73205])
+plt.plot([0,0.75],[0,0.4330127])
+plt.plot([0,0.75],[0,-0.4330127])
+plt.plot([0,0],[-4,4])
+plt.text(-1.5,0,"A")
+plt.text(1.2,0,"B")
+plt.text(0.1,2,"C")
+plt.text(0.1,-2.2,"D")
+plt.text(0.1,0.1,"E")
+plt.text(0.75,0.4330127,"F")
+plt.text(0.75,-0.4330127,"G")
+plt.text(0.1,0.866025,"H")
+plt.text(-3.5,0,"J")
+plt.text(3.1,0,"K")
+plt.annotate('proposition one', xy=(2,2), xytext=(3,3.5),arrowprops=dict(facecolor='yellow', shrink=0.05),)
+plt.text(-3,-4,r'$a^2+b^2=c^2,a^n+b^n≠c^n,n>2$',fontsize=14,color='b')
+plt.axis('equal')
+plt.show()
+
+#命题I.1已知一条线段可以作一个等边三角形。[插图]
+#如果：AB为已知的线段。那么：以线段AB为边作一个等边三角形。
+#以A为圆心、AB为半径作圆BCJ；再以B为圆心、以BA为半径作圆ACK；两圆相交于C点，连接CA、CB。
+#因为：A点是圆BCJ的圆心，所以，CA等于AB（定义I.15）。又因为，点B是圆ACK的圆心，所以，CB等于BA（定义I.15）；
+#因为：等于同量的量互相相等（公理I.1）；所以：线段CA等于CB等于AB。
+#因为：三条线段CA、AB、CB相等。所以：三角形ABC是建立在线段AB上的等边三角形。证完
